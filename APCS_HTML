@@ -3,16 +3,18 @@
 <head>
 <title>koala</title>
 <link rel="stylesheet" type="text/css" href="myStyles.css">
+<script src="APCS_js.js"></script>
 </head>
 <body>
   <div id = "wrapper">
     <div id = "header"> <img id="koala" src="http://www.clipartlord.com/wp-content/uploads/2014/08/koala7.png">
     </div>
     <div id ="nav">
-      <div class = "button">Home</div>
-      <div class = "button"></div>
-      <div class = "button"></div>
-      <div class = "button"></div>
+      <button class = "button" onclick=window.open("http://www.w3schools.com");>W3Schools</button>
+      <button class = "button" onclick=window.open("http://www.iwastesomuchtime.com")>iwastesomuchtime</button>
+      <button class = "button" onclick=window.alert("hi!");>hi</button>
+      <button class = "button" onclick=math();>find the sum</button>
+      <button class = "button" onclick=hello();>hola</button>
     </div>
     <div id ="body"> </div>
     <div id ="foot"> </div>

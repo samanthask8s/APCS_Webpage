@@ -22,7 +22,7 @@ function removeImg(){
     document.getElementById("body").removeChild(document.getElementById("body").childNodes[1]);
   }
 }
-function math(){
+function sums(){
   var x = Math.floor(Math.random()*10);
   var y = Math.floor(Math.random()*10);
   var sum = prompt("What is the sum of "+x+" and "+y+"? ");
@@ -34,6 +34,20 @@ function math(){
     window.alert("ok maybe next time.");
   }else{
     window.alert("Sorry that's not right. try again");
-    math();
+    math(x,y);
+  }
+}
+
+function math(x,y){
+  var sum = prompt("What is the sum of "+x+" and "+y+"? ");
+  var sumxy=x+y;
+  if(sum===sumxy.toString()){
+    window.alert("good job!");
+    document.getElementById("sum").innerHTML = "done";
+  }else if(sum===null){
+    window.alert("ok maybe next time.");
+  }else{
+    window.alert("Sorry that's not right. try again");
+    math(x,y);
   }
 }

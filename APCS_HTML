@@ -13,7 +13,7 @@
       <button class = "button" onclick=window.open("http://www.w3schools.com");>W3Schools</button>
       <button class = "button" onclick=window.open("http://www.iwastesomuchtime.com")>iwastesomuchtime</button>
       <button class = "button" onclick=window.alert("hi!");>hi</button>
-      <button id="sum" class = "button" onclick=math();>find the sum</button>
+      <button id="sum" class = "button" onclick=sums();>find the sum</button>
       <button class = "button" onclick=hello();>Koala</button>
     </div>
     <div id ="body"> </div>

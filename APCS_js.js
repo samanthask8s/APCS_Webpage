@@ -22,32 +22,51 @@ function removeImg(){
     document.getElementById("body").removeChild(document.getElementById("body").childNodes[1]);
   }
 }
-function sums(){
+function maths(){
   var x = Math.floor(Math.random()*10);
   var y = Math.floor(Math.random()*10);
+  var r = Math.floor(Math.random()*3);
+  if(r==0){sums(x,y);}
+  else if(r==1){minus(x,y);}
+  else{times(x,y)}
+
+}
+function sums(x,y){
+
   var sum = prompt("What is the sum of "+x+" and "+y+"? ");
-  var sumxy=x+y;
-  if(sum===sumxy.toString()){
+
+  if(sum==x+y){
     window.alert("good job!");
-    document.getElementById("sum").innerHTML = "done";
+    document.getElementById("sum").innerHTML = "new problem?";
   }else if(sum===null){
     window.alert("ok maybe next time.");
   }else{
     window.alert("Sorry that's not right. try again");
-    math(x,y);
+    sums(x,y);
   }
 }
 
-function math(x,y){
-  var sum = prompt("What is the sum of "+x+" and "+y+"? ");
-  var sumxy=x+y;
-  if(sum===sumxy.toString()){
+function minus(x,y){
+  var ans = prompt("What is "+x+"-"+y+"?");
+  if(ans==x-y){
     window.alert("good job!");
-    document.getElementById("sum").innerHTML = "done";
-  }else if(sum===null){
+    document.getElementById("sum").innerHTML = "new problem?";
+  }else if(ans===null){
     window.alert("ok maybe next time.");
   }else{
     window.alert("Sorry that's not right. try again");
-    math(x,y);
+    minus(x,y);
+  }
+}
+function times(x,y){
+  var ans = prompt("What is "+x+" times "+y+"?");
+  if(ans==x*y){
+    window.alert("good job!");
+    document.getElementById("sum").innerHTML = "new problem?";
+  }else if(ans===null){
+    window.alert("ok maybe next time.");
+  }else{
+    window.alert("Sorry that's not right. try again");
+    times(x,y);
   }
 }

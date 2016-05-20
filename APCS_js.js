@@ -70,3 +70,13 @@ function times(x,y){
     times(x,y);
   }
 }
+function input(){
+  var numString = prompt("Type a list of numbers with commas between");
+  var nums=numString.split(',');
+  var sum=0;
+  for(var i=0; i<nums.length;i++){
+    sum+=parseFloat(nums[i]);
+  }
+  var avg = sum/nums.length;
+  alert(nums+"  Num at 0:"+nums[0]+"   Sum:"+sum+"   Avg:"+avg);
+}

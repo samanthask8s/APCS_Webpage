@@ -15,6 +15,7 @@ body{
   margin:auto;
 }
 #nav{
+
   width:894px;
   height: 50px;
   border: solid purple 3px;
@@ -35,6 +36,7 @@ body{
   margin:auto;
 }
 .button{
+  text-shadow: 1px 1px 4px white, 0 0 25px blue, 0 0 5px darkblue;
   width:150px;
   height: 40px;
   background-color:purple;

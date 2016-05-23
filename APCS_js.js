@@ -74,9 +74,57 @@ function input(){
   var numString = prompt("Type a list of numbers with commas between");
   var nums=numString.split(',');
   var sum=0;
+  var modes=[];
   for(var i=0; i<nums.length;i++){
-    sum+=parseFloat(nums[i]);
+    nums[i]=parseInt(nums[i]);
+    sum+=nums[i];
+    if(modes[nums[i]]==null){
+      modes[nums[i]]=0;
+    }
+    modes[nums[i]]++;
+  }
+  nums=selectionSort(nums);
+  if(nums.length%2==0){
+    var med= (nums[nums.length/2]+nums[nums.length/2-1])/2
+  }else{
+    var med= nums[(nums.length-1)/2]
+  }
+
+  var biggest=0;
+  if(modes[0]==null){
+    modes[0]=0;
+  }
+  for(var i=0; i<modes.length;i++){
+    if(modes[i]>modes[biggest]){
+      biggest=i;
+    }
   }
   var avg = sum/nums.length;
-  alert(nums+"  Num at 0:"+nums[0]+"   Sum:"+sum+"   Avg:"+avg);
+  alert(nums+"  Num at 0:"+nums[0]+"   Sum:"+sum+"   Avg:"+avg+"    Mode:"+biggest+"   Median:"+med);
+}
+function selectionSort(items){
+
+    var len = items.length,
+        min;
+
+    for (i=0; i < len; i++){
+
+        min = i;
+
+        for (j=i+1; j < len; j++){
+            if (items[j] < items[min]){
+                min = j;
+            }
+        }
+        if (i != min){
+            swap(items, i, min);
+        }
+    }
+
+    return items;
+}
+function swap(items, firstIndex, secondIndex){
+    var temp = items[firstIndex];
+    items[firstIndex] = items[secondIndex];
+    items[secondIndex] = temp;
 }

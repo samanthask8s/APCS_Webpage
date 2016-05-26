@@ -20,7 +20,8 @@
       <button id="sum" class = "button" onclick=window.location="APCS_HTML_RandomMath";>Random Math</button>
       <button class = "button" onclick=window.location="APCS_HTML_Koalas";>Koalas</button>
     </div>
-    <div id ="body"> <h1>KOALAS</h1></div>
+    <button class = "button" onclick=input();>input</button>
+    <div id ="body"></div>
     <div id ="foot"> </div>
   </div>
 </body>

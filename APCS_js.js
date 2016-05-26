@@ -1,5 +1,4 @@
-
-function hello(){
+  function hello(){
   var r = confirm("Do you want to see a picture of a koala?");
   if (r == true) {
     removeImg();
@@ -15,7 +14,6 @@ function hello(){
     elem.setAttribute("height", "450px");
     document.getElementById("body").appendChild(elem);
   }
-
 }
 function removeImg(){
   if(document.getElementById("body").childNodes.length!=1){
@@ -29,12 +27,9 @@ function maths(){
   if(r==0){sums(x,y);}
   else if(r==1){minus(x,y);}
   else{times(x,y)}
-
 }
 function sums(x,y){
-
   var sum = prompt("What is the sum of "+x+" and "+y+"? ");
-
   if(sum==x+y){
     window.alert("good job!");
     document.getElementById("sum").innerHTML = "new problem?";
@@ -45,7 +40,6 @@ function sums(x,y){
     sums(x,y);
   }
 }
-
 function minus(x,y){
   var ans = prompt("What is "+x+"-"+y+"?");
   if(ans==x-y){
@@ -100,17 +94,14 @@ function input(){
     }
   }
   var avg = sum/nums.length;
-  alert(nums+"  Num at 0:"+nums[0]+"   Sum:"+sum+"   Avg:"+avg+"    Mode:"+biggest+"   Median:"+med);
+  var body = document.getElementById("body")
+  body.innerHTML=body.innerHTML+"<br><br>"+nums+"<br>Avg:"+avg+"<br>Mode:"+biggest+"<br>Median:"+med;
 }
 function selectionSort(items){
-
     var len = items.length,
         min;
-
     for (i=0; i < len; i++){
-
         min = i;
-
         for (j=i+1; j < len; j++){
             if (items[j] < items[min]){
                 min = j;
@@ -120,7 +111,6 @@ function selectionSort(items){
             swap(items, i, min);
         }
     }
-
     return items;
 }
 function swap(items, firstIndex, secondIndex){
